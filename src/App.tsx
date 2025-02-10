@@ -4,9 +4,9 @@ import {useEffect, useState} from "react";
 import {ChampionData} from "./interfaces/Champions.ts";
 
 const ParentDiv=styled.div`
-    width: 100vw;
     margin: auto;
-    border: 5px darkgoldenrod solid;
+    border: 3px rgb(93, 151, 217) solid;
+    text-align: center;
 `;
 
 export default function App() {
@@ -19,21 +19,21 @@ export default function App() {
           try {
               const rawData = await fetch("https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json");
               const data = await rawData.json();
-
               // Set champions data
               setChampions(data.data);
 
               console.log("Data fetched successfully");
-          } catch (error) {
-              console.error("There was an error:", error);
+          } catch (e) {
+              console.log("There was an error: " + e);
           }
       }
 
       fetchData();
-  }, []); // Runs only once on mount
+  }, []);
 
   return (
       <ParentDiv>
+          {/* <h1>League of Legends champion details</h1> */}
           <LolChamps champions={champions} />
       </ParentDiv>
   );
