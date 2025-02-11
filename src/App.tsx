@@ -12,7 +12,6 @@ const ParentDiv=styled.div`
 export default function App() {
   // State to store champion data
   const [champions, setChampions] = useState<ChampionData>({});
-
   // useEffect Hook for fetching champion names
   useEffect(() => {
       async function fetchData(): Promise<void> {
@@ -21,19 +20,15 @@ export default function App() {
               const data = await rawData.json();
               // Set champions data
               setChampions(data.data);
-
               console.log("Data fetched successfully");
           } catch (e) {
               console.log("There was an error: " + e);
           }
       }
-
       fetchData();
   }, []);
-
   return (
       <ParentDiv>
-          {/* <h1>League of Legends champion details</h1> */}
           <LolChamps champions={champions} />
       </ParentDiv>
   );

@@ -22,12 +22,10 @@ const ChampionDiv=styled.div`
 
 const ChampionName=styled.h1`
     margin-top: 0;
-    
 `;
 
 const ChampionTitle=styled.h3`
     margin-bottom: 0;
-    
 `;
 
 const ChampionInfo=styled.p`

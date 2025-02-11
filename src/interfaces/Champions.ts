@@ -3,9 +3,7 @@ export interface ChampionData {
         id: string;
         name: string;
         title: string;
-        image: {
-            full: string;
-        };
+        image: { full: string; };
         blurb: string;
         tags: string[];
         info: {
@@ -15,8 +13,6 @@ export interface ChampionData {
             difficulty: number;
         };
         partype: string;
-        stats: {
-            attackrange: number;
-        };
-    };
+        stats: { attackrange: number; }; 
+    }; 
 }
