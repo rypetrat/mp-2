@@ -1,3 +1,4 @@
+// Defines the data structure for the data elements being collected from the API
 export interface ChampionData {
     [key: string]: {
         id: string;

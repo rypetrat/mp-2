@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {ChampionData} from "../interfaces/Champions.ts";
 
+// Defines the styling for the AllChammpsDiv
 const AllChampsDiv=styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -8,6 +9,7 @@ const AllChampsDiv=styled.div`
     background-color: rgb(56, 32, 237);
 `;
 
+// Defines the styling for the ChampionDiv div
 const ChampionDiv=styled.div`
     display: flex;
     flex-direction: column;   
@@ -20,22 +22,27 @@ const ChampionDiv=styled.div`
     text-align: center;
 `;
 
+// Defines the styling for ChampionName h1
 const ChampionName=styled.h1`
     margin-top: 0;
 `;
 
+// Defines the styling for ChampionTitle h3
 const ChampionTitle=styled.h3`
     margin-bottom: 0;
 `;
 
+// Defines the styling for ChampionInfo p
 const ChampionInfo=styled.p`
     font-size: calc(5px + 0.5vw);
 `;
 
+// Defines the styling for Info b
 const Info=styled.b`
     color: rgb(93, 151, 217);
 `;
 
+// Defines the structure for how each champion should be rendered and exports to App()
 export default function LolChamps(props: { champions: ChampionData }) {
     return (
         <AllChampsDiv>
