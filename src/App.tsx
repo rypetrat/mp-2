@@ -11,7 +11,7 @@ const ParentDiv=styled.div`
 `;
 
 export default function App() {
-  // State to store champion data
+  // State to store champion data as defined by the structure outlined in Champions.ts
   const [champions, setChampions] = useState<ChampionData>({});
   // UseEffect hook for fetching champions
   useEffect(() => {
