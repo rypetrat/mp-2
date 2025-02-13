@@ -15,7 +15,7 @@ export default function App() {
   const [champions, setChampions] = useState<ChampionData>({});
   // UseEffect hook for fetching champions
   useEffect(() => {
-      async function fetchData(): Promise<void> {
+      async function fetchData() {
           try {
               // Fetches the data from the ddragon API
               const rawData = await fetch("https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json");
