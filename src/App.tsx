@@ -31,7 +31,7 @@ export default function App() {
           }
       }
       fetchData();
-  }, []);
+  }, [champions.length]);
   return (
       // Renders Lolchamps with the data set in champions wrapped in parent div
       <ParentDiv>
